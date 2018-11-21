@@ -168,7 +168,7 @@ type post = {
   title: string,
   body: string,
 };
-type actionType = AddPost(string) | DelPost(string) | DelByTitle(string)
+type actionType = AddPost(post) | DelPost(int) | DelByTitle(string)
 
 let addPost = (~title, ~body) => AddPost({
   id: makeMeUnique(),
@@ -182,7 +182,7 @@ let delPost = (id) => DelPost(id)
 let reReduxProblemReducerFixed = {js|
 let reducer = (~state=[], ~action) => switch (action) {
   | AddPost(post) => [post, ...state]
-  | DelPosts(delId) => List.filter(
+  | DelPost(delId) => List.filter(
     ({id}) => id !== delId,
     state,
   )
