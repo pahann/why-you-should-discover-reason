@@ -55,7 +55,7 @@ const reducer = (state = [], action) => switch (action.actionType) {
 |js};
 
 let reduxProblemReducerThrow = {js|
-export default (state = [], action) => switch (action.type) {
+const reducer = (state = [], action) => switch (action.actionType) {
   case "DEL_POSTS":
       return state.filter(
           ({id}) => id !== action.payload
