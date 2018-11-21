@@ -26,6 +26,7 @@ type images = {
   headache: string,
   reasonconf: string,
   reasonconflogo: string,
+  delpostsbug: string,
 };
 
 let images: images = {
@@ -42,6 +43,7 @@ let images: images = {
   headdoor: [%raw {| require('./assets/headdoor.gif')|}],
   reasonconflogo: [%raw {| require('./assets/reasonconflogo.svg')|}],
   reasonconf: [%raw {| require('./assets/reasonconf.jpg')|}],
+  delpostsbug: [%raw {| require('./assets/delpostsbug.png')|}],
 };
 
 Preloader.load(images);
@@ -280,6 +282,10 @@ let make = (_children) =>{
             />
           </Appear>
         </Slide>
+        <Slide transition=[|Slide|] bgImage=images.city bgDarken=0.75>
+          <Heading size=1 caps=true textColor="primary">(s({js|Here's your mistake darling|js}))</Heading>
+          <Image width="700px" src=images.delpostsbug />
+        </Slide> 
         <Slide transition=[|Slide|] bgImage=images.city bgDarken=0.75>
           <Heading size=1 caps=true fit=true textColor="primary">(s({js|Un choix exhaustif|js}))</Heading>
           <CodePane
