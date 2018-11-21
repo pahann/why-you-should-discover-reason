@@ -1,5 +1,8 @@
 # Why you should discover ReasonML
 
+## Slides
+https://silly-panini-27e720.netlify.com/
+
 ## Examples
 * Unexisting DelPosts: https://sketch.sh/s/xrrw376iQQAGiiu1m7d0sL/
 * Not-exhaustive Pattern Matching: https://sketch.sh/s/cyVWxaUmg7Wz3cpkvcPRgO/
